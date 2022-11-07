@@ -1,0 +1,322 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+header h1 {
+  max-width: 25rem;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 0.8em;
+  color: hsl(300deg, 43%, 22%);
+}
+header p {
+  text-align: center;
+  max-width: 29.3rem;
+  margin-top: 1.7rem;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  color: hsl(303deg, 10%, 53%);
+}
+
+.rating_list {
+  margin-top: 3rem;
+  width: min(90%, 360px);
+}
+.rating_list ul .rated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 65px;
+  margin-bottom: 13px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: hsl(300deg, 24%, 96%);
+}
+.rating_list ul .rated::before {
+  content: "";
+  min-width: 81px;
+  height: 1.35rem;
+  display: block;
+  background-image: url("../images/icon-star.svg");
+  background-repeat: space;
+  background-size: 15px;
+}
+
+.opinions {
+  width: 100%;
+  margin-top: 2.2rem;
+}
+.opinions ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opinions ul li {
+  width: min(90%, 360px);
+  min-height: 200px;
+  margin-bottom: 13px;
+  padding: 2.5rem;
+  border-radius: 8px;
+  background-color: hsl(300deg, 43%, 22%);
+}
+.opinions ul li .top_section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.opinions ul li .top_section img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.opinions ul li .top_section .name_status {
+  margin-left: 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: hsl(0deg, 0%, 100%);
+}
+.opinions ul li .top_section .name_status .status {
+  color: hsl(333deg, 80%, 67%);
+}
+.opinions ul li blockquote {
+  max-width: 91%;
+  margin-top: 2rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  color: hsl(300deg, 24%, 96%);
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 1440px);
+    height: 90vh;
+  }
+  .switch {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+  }
+  .switch header {
+    align-items: flex-start;
+    margin-top: 6rem;
+  }
+  .switch header h1 {
+    text-align: left;
+    max-width: 30rem;
+    font-size: 4rem;
+    line-height: 3.3rem;
+  }
+  .switch header p {
+    text-align: left;
+    font-size: 1.7rem;
+    max-width: 39rem;
+  }
+  .rating_list ul .rated {
+    flex-direction: row;
+    justify-content: initial;
+    height: 45px;
+  }
+  .rating_list ul .rated::before {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .rating_list {
+    margin-top: 6rem;
+  }
+  .opinions {
+    max-width: 85%;
+    margin-top: 7rem;
+  }
+  .opinions ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: initial;
+    gap: 10px;
+  }
+  .opinions ul li:nth-child(2) {
+    transform: translateY(20px);
+  }
+  .opinions ul li:nth-child(3) {
+    transform: translateY(40px);
+  }
+}
+@media screen and (min-width: 850px) {
+  .rating_list ul li:nth-child(1) {
+    transform: translateX(-100px);
+  }
+  .rating_list ul li:nth-child(2) {
+    transform: translateX(-50px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
